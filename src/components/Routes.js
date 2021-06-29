@@ -19,7 +19,7 @@ const Routes = () => {
 
         <div className="row">
             <div className="col-md-12">
-                <Router basename={process.env.PUBLIC_URL + '/'}>
+                <Router>
                     <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
                         <Navbar.Brand >Welcome to my website!</Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
