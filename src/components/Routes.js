@@ -19,9 +19,9 @@ const Routes = () => {
 
         <div className="row">
             <div className="col-md-12">
-                <Router>
+                <Router basename={process.env.PUBLIC_URL}>
                     <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
-                        <Navbar.Brand href="#home">Welcome to my website!</Navbar.Brand>
+                        <Navbar.Brand >Welcome to my website!</Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="mr-auto">
@@ -35,7 +35,7 @@ const Routes = () => {
                     <ProfilePicture/>
 
                     <Switch>
-                        <Route path="/">
+                        <Route exact path='/'>
                             <About />
                         </Route>
                         <Route path="/projects">
