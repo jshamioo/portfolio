@@ -1,21 +1,52 @@
 import {
     BrowserRouter as Router,
     Route,
-    NavLink,
+    Switch,
   } from 'react-router-dom'
-  import ProfilePicture from './ProfilePicture'
+  import { 
+      Navbar,
+      Nav,
+      NavLink,
+    } from 'react-bootstrap'
   import About from './About'
   import Projects from './Projects'
+  import pdf from './../resume/Joseph_Shamioon_Resume.pdf'
+  import Emoji from './Emoji'
+  import ProfilePicture from './ProfilePicture'
 
 const Routes = () => {
     return (
-        <Router>
-            <NavLink to="/">About Me</NavLink>
-            <NavLink to="/projects">Projects</NavLink>
-            <ProfilePicture />
-            <Route path="/" exact component={About} />
-            <Route path="/projects" component={Projects} />
-        </Router>
+
+        <div className="row">
+            <div className="col-md-12">
+                <Router>
+                    <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
+                        <Navbar.Brand href="#home">Welcome to my website!</Navbar.Brand>
+                        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                        <Navbar.Collapse id="basic-navbar-nav">
+                            <Nav className="mr-auto">
+                                <NavLink href="/" ><Emoji symbol="😎"/>About Me</NavLink>
+                                <NavLink href="/projects"><Emoji symbol="🌠"/>Projects</NavLink>
+                                <NavLink href={pdf} target="_blank"><Emoji symbol="📜"/>Resume</NavLink>
+                            </Nav>
+                        </Navbar.Collapse>
+                    </Navbar>
+
+                    <ProfilePicture/>
+
+                    <Switch>
+                        <Route exact path="/">
+                            <About />
+                        </Route>
+                        <Route path="/projects">
+                            <Projects />
+                        </Route>
+                            </Switch>
+
+                </Router>
+            </div>
+        </div>
+
     )
 }
 

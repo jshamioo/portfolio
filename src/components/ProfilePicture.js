@@ -1,12 +1,11 @@
+import Logo from "./../photos/smilingErased.png"
 
-import Logo from "./../photos/KobeKanyeBear.jpg"
-// import About from './About'
-// import Projects from './Projects'
 
 const ProfilePicture = () => {
+
     return (
-            <div>
-                <img src={Logo} alt="no mames"/>
+            <div className="picContainer">
+                <img className="pic" src={Logo} alt="profile pic" />       
             </div>
     )
 }

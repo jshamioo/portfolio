@@ -1,0 +1,75 @@
+.container {
+    max-width: 100%;
+    padding: 0;
+}
+
+.picContainer {
+    text-align: center;
+    display: block;
+    position: relative;
+}
+
+.pic {
+    width: 350px;
+    height: 350px;
+}
+
+.navbar-brand {
+    font-size: x-large;
+}
+
+
+
+a.nav-link {
+    font-size: large;
+    padding: 15px;
+}
+
+a.nav-link:hover {
+    text-decoration: underline;
+    text-decoration-color: red;
+    -o-transition:.4s;
+    -ms-transition:.4s;
+    -moz-transition:.4s;
+    -webkit-transition:.4s;
+    transition:.4s;
+}
+
+.about h1 {
+    padding-top: 3%;
+    text-align: center;
+}
+
+@media screen and (min-width: 601px) {
+    .about-para  {
+        padding-left: 20%;
+        padding-right: 20%;
+        font-size: 27px;
+        font-family: 'Alegreya', serif;
+    }
+
+    .project-info {
+        flex-basis: 50%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .about-para {
+      padding: 2%;
+      font-family: 'Alegreya', serif;
+    }
+
+    .project-info {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+}
+
+.project-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
