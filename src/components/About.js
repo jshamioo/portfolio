@@ -1,9 +1,3 @@
-import { 
-    
-  } from 'react-bootstrap'
-
-import Emoji from './Emoji'
-
 const About = () => {
     return (
         <div className="about">

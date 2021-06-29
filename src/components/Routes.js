@@ -35,7 +35,7 @@ const Routes = () => {
                     <ProfilePicture/>
 
                     <Switch>
-                        <Route exact path="/">
+                        <Route path="/">
                             <About />
                         </Route>
                         <Route path="/projects">
