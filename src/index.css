@@ -73,3 +73,12 @@ a.nav-link:hover {
     flex-direction: row;
     flex-wrap: wrap;
 }
+
+.footer-container {
+    padding: 5%;
+    text-align: center;
+}
+
+.social-svg {
+    padding: 6%;
+}
